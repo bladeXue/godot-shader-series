@@ -1,0 +1,7 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://cm3gbk5w62rtb"]
+
+[ext_resource type="Shader" path="res://Materials/Shaders/PixelizeCanvasItemShader.gdshader" id="1_fti1l"]
+
+[resource]
+shader = ExtResource("1_fti1l")
+shader_parameter/pixelSize = 1
