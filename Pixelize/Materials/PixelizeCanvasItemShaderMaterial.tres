@@ -1,7 +1,9 @@
-[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://cm3gbk5w62rtb"]
+[gd_resource type="ShaderMaterial" load_steps=3 format=3 uid="uid://cm3gbk5w62rtb"]
 
 [ext_resource type="Shader" path="res://Materials/Shaders/PixelizeCanvasItemShader.gdshader" id="1_fti1l"]
+[ext_resource type="Texture2D" uid="uid://b14asv7xpl0or" path="res://Arts/Textures/diona.png" id="2_hs0ks"]
 
 [resource]
 shader = ExtResource("1_fti1l")
 shader_parameter/pixelSize = 1
+shader_parameter/colorTexture = ExtResource("2_hs0ks")
