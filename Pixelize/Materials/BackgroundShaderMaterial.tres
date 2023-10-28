@@ -1,0 +1,8 @@
+[gd_resource type="ShaderMaterial" load_steps=3 format=3 uid="uid://bovx0poj1413h"]
+
+[ext_resource type="Shader" path="res://Materials/Shaders/BackgroundShader.gdshader" id="1_2shge"]
+[ext_resource type="Texture2D" uid="uid://da87ha8eivgj" path="res://Arts/Textures/street.png" id="2_5enis"]
+
+[resource]
+shader = ExtResource("1_2shge")
+shader_parameter/color_texture = ExtResource("2_5enis")

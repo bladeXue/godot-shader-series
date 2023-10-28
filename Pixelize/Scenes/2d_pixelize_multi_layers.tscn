@@ -1,0 +1,83 @@
+[gd_scene load_steps=12 format=3 uid="uid://dwjjli4qtenxa"]
+
+[ext_resource type="Shader" path="res://Materials/Shaders/BackgroundShader.gdshader" id="1_hshpq"]
+[ext_resource type="Texture2D" uid="uid://cnf60iytcg0ht" path="res://Arts/Textures/white.png" id="2_1hriv"]
+[ext_resource type="Texture2D" uid="uid://da87ha8eivgj" path="res://Arts/Textures/street.png" id="2_uigeb"]
+[ext_resource type="Texture2D" uid="uid://6w0sj4kneivl" path="res://Arts/Textures/leaves.png" id="3_64500"]
+[ext_resource type="Shader" path="res://Materials/Shaders/PixelizeCanvasLayerShader.gdshader" id="4_asp7i"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_358da"]
+shader = ExtResource("1_hshpq")
+shader_parameter/color_texture = ExtResource("2_uigeb")
+
+[sub_resource type="Shader" id="Shader_7yl2k"]
+code = "shader_type canvas_item;
+
+uniform sampler2D color_texture : filter_linear_mipmap;
+
+void fragment() {
+	COLOR = texture(color_texture, UV);
+}
+"
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_p7sqr"]
+shader = SubResource("Shader_7yl2k")
+shader_parameter/color_texture = ExtResource("3_64500")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_58fl7"]
+shader = ExtResource("4_asp7i")
+shader_parameter/pixel_size = 1
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_q0rc7"]
+shader = ExtResource("4_asp7i")
+shader_parameter/pixel_size = 9
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_h7dhg"]
+shader = ExtResource("4_asp7i")
+shader_parameter/pixel_size = 15
+
+[node name="2d_pixelize_layers" type="Node2D"]
+
+[node name="Street" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_358da")
+position = Vector2(800, 450)
+scale = Vector2(16, 9)
+texture = ExtResource("2_1hriv")
+
+[node name="Pokemon" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_p7sqr")
+position = Vector2(800, 630)
+scale = Vector2(4.8, 4.8)
+texture = ExtResource("2_1hriv")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+material = SubResource("ShaderMaterial_58fl7")
+anchors_preset = -1
+anchor_right = 0.5
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer2"]
+material = SubResource("ShaderMaterial_q0rc7")
+anchors_preset = -1
+anchor_left = 0.5
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CanvasLayer3" type="CanvasLayer" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer3"]
+material = SubResource("ShaderMaterial_h7dhg")
+anchors_preset = -1
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
