@@ -1,6 +1,6 @@
 shader_type canvas_item;
 
-// pixelize scale and screen-reading texture
+// Set pixelation scale and screen-reading texture
 uniform int pixel_size : hint_range(1, 99, 1);
 uniform sampler2D screen_texture : hint_screen_texture, filter_linear_mipmap;
 

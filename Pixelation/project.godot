@@ -10,8 +10,8 @@ config_version=5
 
 [application]
 
-config/name="Pixelize"
-run/main_scene="res://Scenes/2d_pixelize_items.tscn"
+config/name="Pixelation"
+run/main_scene="res://Scenes/PixelateItems2D.tscn"
 config/features=PackedStringArray("4.1", "Forward Plus")
 config/icon="res://icon.svg"
 

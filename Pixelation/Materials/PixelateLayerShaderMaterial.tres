@@ -1,6 +1,6 @@
 [gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://maqf0uam0jnk"]
 
-[ext_resource type="Shader" path="res://Materials/Shaders/PixelizeCanvasLayerShader.gdshader" id="1_7u1dj"]
+[ext_resource type="Shader" path="res://Materials/Shaders/PixelateLayerShader.gdshader" id="1_7u1dj"]
 
 [resource]
 shader = ExtResource("1_7u1dj")

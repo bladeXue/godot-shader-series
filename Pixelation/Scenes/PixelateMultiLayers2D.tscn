@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://cnf60iytcg0ht" path="res://Arts/Textures/white.png" id="2_1hriv"]
 [ext_resource type="Texture2D" uid="uid://da87ha8eivgj" path="res://Arts/Textures/street.png" id="2_uigeb"]
 [ext_resource type="Texture2D" uid="uid://6w0sj4kneivl" path="res://Arts/Textures/leaves.png" id="3_64500"]
-[ext_resource type="Shader" path="res://Materials/Shaders/PixelizeCanvasLayerShader.gdshader" id="4_asp7i"]
+[ext_resource type="Shader" path="res://Materials/Shaders/PixelateLayerShader.gdshader" id="5_7nsqb"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_358da"]
 shader = ExtResource("1_hshpq")
@@ -25,18 +25,18 @@ shader = SubResource("Shader_7yl2k")
 shader_parameter/color_texture = ExtResource("3_64500")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_58fl7"]
-shader = ExtResource("4_asp7i")
+shader = ExtResource("5_7nsqb")
 shader_parameter/pixel_size = 1
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_q0rc7"]
-shader = ExtResource("4_asp7i")
+shader = ExtResource("5_7nsqb")
 shader_parameter/pixel_size = 9
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_h7dhg"]
-shader = ExtResource("4_asp7i")
+shader = ExtResource("5_7nsqb")
 shader_parameter/pixel_size = 15
 
-[node name="2d_pixelize_layers" type="Node2D"]
+[node name="PixelateMultiLayers2D" type="Node2D"]
 
 [node name="Street" type="Sprite2D" parent="."]
 material = SubResource("ShaderMaterial_358da")

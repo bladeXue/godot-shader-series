@@ -1,6 +1,6 @@
 [gd_resource type="ShaderMaterial" load_steps=3 format=3 uid="uid://cm3gbk5w62rtb"]
 
-[ext_resource type="Shader" path="res://Materials/Shaders/PixelizeCanvasItemShader.gdshader" id="1_fti1l"]
+[ext_resource type="Shader" path="res://Materials/Shaders/PixelateItemShader.gdshader" id="1_fti1l"]
 [ext_resource type="Texture2D" uid="uid://dt74tjdp752au" path="res://Arts/Textures/diona.png" id="2_hs0ks"]
 
 [resource]
